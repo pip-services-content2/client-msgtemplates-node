@@ -26,7 +26,7 @@ class MessageTemplatesResolverV1 {
         this._config = config.getSection("message_templates");
     }
     setReferences(references) {
-        this._client = references.getOneOptional(new pip_services3_commons_nodex_2.Descriptor('pip-services-msgtemplates', 'client', '*', '*', '1.0'));
+        this._client = references.getOneOptional(new pip_services3_commons_nodex_2.Descriptor('service-msgtemplates', 'client', '*', '*', '1.0'));
     }
     put(name, template) {
         this._config[name] = template;

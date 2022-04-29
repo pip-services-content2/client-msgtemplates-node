@@ -1,5 +1,10 @@
 # Message Templates Microservice Client for Node.js / ES2017 ChangeLog
 
+<a name="1.0.1"></a> 1.0.1 (2022-04-29)
+
+#### Bug Fixes
+* Fixed descriptors name
+
 <a name="1.0.0"></a> 1.0.0 (2022-04-29)
 
 #### Features

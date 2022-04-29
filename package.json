@@ -1,8 +1,8 @@
 {
     "name": "client-msgtemplates-node",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "author": "Conceptual Vision Consulting LLC",
-    "description": "Node.js / EC2017 client sdk for pip-services-msgtemplates microservice",
+    "description": "Node.js / EC2017 client sdk for service-msgtemplates microservice",
     "contributors": [
         {
             "name": "Sergey Seroukhov",
@@ -21,7 +21,7 @@
     "noAnalyze": true,
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com:pip-services-content/client-msgtemplates-node.git"
+        "url": "ssh://git@github.com:pip-services-content2/client-msgtemplates-node.git"
     },
     "license": "MIT",
     "engines": {

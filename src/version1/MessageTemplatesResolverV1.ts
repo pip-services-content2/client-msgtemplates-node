@@ -26,7 +26,7 @@ export class MessageTemplatesResolverV1 implements IReferenceable, IReconfigurab
 
 	public setReferences(references: IReferences): void {
         this._client = references.getOneOptional<IMessageTemplatesClientV1>(
-            new Descriptor('pip-services-msgtemplates', 'client', '*', '*', '1.0')
+            new Descriptor('service-msgtemplates', 'client', '*', '*', '1.0')
         );
 	}
 

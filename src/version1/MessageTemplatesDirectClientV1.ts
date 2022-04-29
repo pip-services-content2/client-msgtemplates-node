@@ -12,7 +12,7 @@ export class MessageTemplatesDirectClientV1 extends DirectClient<any> implements
             
     public constructor() {
         super();
-        this._dependencyResolver.put('controller', new Descriptor("pip-services-msgtemplates", "controller", "*", "*", "*"))
+        this._dependencyResolver.put('controller', new Descriptor("service-msgtemplates", "controller", "*", "*", "*"))
     }
 
     public async getTemplates(correlationId: string, filter: FilterParams, paging: PagingParams): Promise<DataPage<MessageTemplateV1>> {

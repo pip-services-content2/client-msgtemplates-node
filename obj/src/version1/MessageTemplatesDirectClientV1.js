@@ -15,7 +15,7 @@ const pip_services3_rpc_nodex_1 = require("pip-services3-rpc-nodex");
 class MessageTemplatesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectClient {
     constructor() {
         super();
-        this._dependencyResolver.put('controller', new pip_services3_commons_nodex_1.Descriptor("pip-services-msgtemplates", "controller", "*", "*", "*"));
+        this._dependencyResolver.put('controller', new pip_services3_commons_nodex_1.Descriptor("service-msgtemplates", "controller", "*", "*", "*"));
     }
     getTemplates(correlationId, filter, paging) {
         return __awaiter(this, void 0, void 0, function* () {

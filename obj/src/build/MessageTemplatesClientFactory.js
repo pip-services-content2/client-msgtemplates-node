@@ -21,11 +21,11 @@ class MessageTemplatesClientFactory extends pip_services3_components_nodex_1.Fac
     }
 }
 exports.MessageTemplatesClientFactory = MessageTemplatesClientFactory;
-MessageTemplatesClientFactory.Descriptor = new pip_services3_commons_nodex_1.Descriptor('pip-services-msgtemplates', 'factory', 'default', 'default', '1.0');
-MessageTemplatesClientFactory.NullClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('pip-services-msgtemplates', 'client', 'null', 'default', '1.0');
-MessageTemplatesClientFactory.DirectClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('pip-services-msgtemplates', 'client', 'direct', 'default', '1.0');
-MessageTemplatesClientFactory.HttpClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('pip-services-msgtemplates', 'client', 'http', 'default', '1.0');
-MessageTemplatesClientFactory.LambdaClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('pip-services-msgtemplates', 'client', 'lambda', 'default', '1.0');
-MessageTemplatesClientFactory.CommandableGrpcClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('pip-services-msgtemplates', 'client', 'commandable-grpc', 'default', '1.0');
-MessageTemplatesClientFactory.GrpcClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('pip-services-msgtemplates', 'client', 'grpc', 'default', '1.0');
+MessageTemplatesClientFactory.Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'factory', 'default', 'default', '1.0');
+MessageTemplatesClientFactory.NullClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'null', 'default', '1.0');
+MessageTemplatesClientFactory.DirectClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'direct', 'default', '1.0');
+MessageTemplatesClientFactory.HttpClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'http', 'default', '1.0');
+MessageTemplatesClientFactory.LambdaClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'lambda', 'default', '1.0');
+MessageTemplatesClientFactory.CommandableGrpcClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'commandable-grpc', 'default', '1.0');
+MessageTemplatesClientFactory.GrpcClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'grpc', 'default', '1.0');
 //# sourceMappingURL=MessageTemplatesClientFactory.js.map
