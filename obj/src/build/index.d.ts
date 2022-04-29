@@ -1,0 +1,1 @@
+export { MessageTemplatesClientFactory } from './MessageTemplatesClientFactory';
