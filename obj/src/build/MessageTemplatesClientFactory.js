@@ -5,8 +5,8 @@ const pip_services3_commons_nodex_1 = require("pip-services3-commons-nodex");
 const pip_services3_components_nodex_1 = require("pip-services3-components-nodex");
 const MessageTemplatesNullClientV1_1 = require("../version1/MessageTemplatesNullClientV1");
 const MessageTemplatesDirectClientV1_1 = require("../version1/MessageTemplatesDirectClientV1");
-const MessageTemplatesHttpClientV1_1 = require("../version1/MessageTemplatesHttpClientV1");
-const MessageTemplatesLambdaClientV1_1 = require("../version1/MessageTemplatesLambdaClientV1");
+const MessageTemplatesCommandableHttpClientV1_1 = require("../version1/MessageTemplatesCommandableHttpClientV1");
+const MessageTemplatesCommandableLambdaClientV1_1 = require("../version1/MessageTemplatesCommandableLambdaClientV1");
 const MessageTemplatesCommandableGrpcClientV1_1 = require("../version1/MessageTemplatesCommandableGrpcClientV1");
 const MessageTemplatesGrpcClientV1_1 = require("../version1/MessageTemplatesGrpcClientV1");
 class MessageTemplatesClientFactory extends pip_services3_components_nodex_1.Factory {
@@ -14,8 +14,8 @@ class MessageTemplatesClientFactory extends pip_services3_components_nodex_1.Fac
         super();
         this.registerAsType(MessageTemplatesClientFactory.NullClientV1Descriptor, MessageTemplatesNullClientV1_1.MessageTemplatesNullClientV1);
         this.registerAsType(MessageTemplatesClientFactory.DirectClientV1Descriptor, MessageTemplatesDirectClientV1_1.MessageTemplatesDirectClientV1);
-        this.registerAsType(MessageTemplatesClientFactory.HttpClientV1Descriptor, MessageTemplatesHttpClientV1_1.MessageTemplatesHttpClientV1);
-        this.registerAsType(MessageTemplatesClientFactory.LambdaClientV1Descriptor, MessageTemplatesLambdaClientV1_1.MessageTemplatesLambdaClientV1);
+        this.registerAsType(MessageTemplatesClientFactory.HttpClientV1Descriptor, MessageTemplatesCommandableHttpClientV1_1.MessageTemplatesCommandableHttpClientV1);
+        this.registerAsType(MessageTemplatesClientFactory.LambdaClientV1Descriptor, MessageTemplatesCommandableLambdaClientV1_1.MessageTemplatesCommandableLambdaClientV1);
         this.registerAsType(MessageTemplatesClientFactory.CommandableGrpcClientV1Descriptor, MessageTemplatesCommandableGrpcClientV1_1.MessageTemplatesCommandableGrpcClientV1);
         this.registerAsType(MessageTemplatesClientFactory.GrpcClientV1Descriptor, MessageTemplatesGrpcClientV1_1.MessageTemplatesGrpcClientV1);
     }

@@ -19,12 +19,12 @@ export class MessageTemplatesDirectClientV1 extends DirectClient<any> implements
         let timing = this.instrument(correlationId, 'message_templates.get_templates');
 
         try {
-            return await this._controller.getTemplates(correlationId, filter, paging);
+            let res = await this._controller.getTemplates(correlationId, filter, paging);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -32,12 +32,12 @@ export class MessageTemplatesDirectClientV1 extends DirectClient<any> implements
         let timing = this.instrument(correlationId, 'message_templates.get_template_by_id');
         
         try {
-            return await this._controller.getTemplateById(correlationId, id);
+            let res = await this._controller.getTemplateById(correlationId, id);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -45,12 +45,12 @@ export class MessageTemplatesDirectClientV1 extends DirectClient<any> implements
         let timing = this.instrument(correlationId, 'message_templates.get_template_by_id_or_name');
 
         try {
-            return await this._controller.getTemplateByIdOrName(correlationId, idOrName);
+            let res = await this._controller.getTemplateByIdOrName(correlationId, idOrName);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -58,12 +58,12 @@ export class MessageTemplatesDirectClientV1 extends DirectClient<any> implements
         let timing = this.instrument(correlationId, 'message_templates.create_template');
         
         try {
-            return await this._controller.createTemplate(correlationId, template);
+            let res = await this._controller.createTemplate(correlationId, template);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -71,12 +71,12 @@ export class MessageTemplatesDirectClientV1 extends DirectClient<any> implements
         let timing = this.instrument(correlationId, 'message_templates.update_template');
         
         try {
-            return await this._controller.updateTemplate(correlationId, template);
+            let res = await this._controller.updateTemplate(correlationId, template);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -84,12 +84,12 @@ export class MessageTemplatesDirectClientV1 extends DirectClient<any> implements
         let timing = this.instrument(correlationId, 'message_templates.delete_template_by_id');
 
         try {
-            return await this._controller.deleteTemplateById(correlationId, id);
+            let res = await this._controller.deleteTemplateById(correlationId, id);
+            timing.endTiming();
+            return res;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 }

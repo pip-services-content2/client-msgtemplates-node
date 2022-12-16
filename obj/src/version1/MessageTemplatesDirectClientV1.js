@@ -21,14 +21,13 @@ class MessageTemplatesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectCli
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'message_templates.get_templates');
             try {
-                return yield this._controller.getTemplates(correlationId, filter, paging);
+                let res = yield this._controller.getTemplates(correlationId, filter, paging);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -36,14 +35,13 @@ class MessageTemplatesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectCli
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'message_templates.get_template_by_id');
             try {
-                return yield this._controller.getTemplateById(correlationId, id);
+                let res = yield this._controller.getTemplateById(correlationId, id);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -51,14 +49,13 @@ class MessageTemplatesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectCli
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'message_templates.get_template_by_id_or_name');
             try {
-                return yield this._controller.getTemplateByIdOrName(correlationId, idOrName);
+                let res = yield this._controller.getTemplateByIdOrName(correlationId, idOrName);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -66,14 +63,13 @@ class MessageTemplatesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectCli
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'message_templates.create_template');
             try {
-                return yield this._controller.createTemplate(correlationId, template);
+                let res = yield this._controller.createTemplate(correlationId, template);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -81,14 +77,13 @@ class MessageTemplatesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectCli
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'message_templates.update_template');
             try {
-                return yield this._controller.updateTemplate(correlationId, template);
+                let res = yield this._controller.updateTemplate(correlationId, template);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -96,14 +91,13 @@ class MessageTemplatesDirectClientV1 extends pip_services3_rpc_nodex_1.DirectCli
         return __awaiter(this, void 0, void 0, function* () {
             let timing = this.instrument(correlationId, 'message_templates.delete_template_by_id');
             try {
-                return yield this._controller.deleteTemplateById(correlationId, id);
+                let res = yield this._controller.deleteTemplateById(correlationId, id);
+                timing.endTiming();
+                return res;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }

@@ -1,13 +1,14 @@
 import { ConfigParams } from 'pip-services3-commons-nodex';
+
 import { FilterParams } from 'pip-services3-commons-nodex';
 import { PagingParams } from 'pip-services3-commons-nodex';
 import { DataPage } from 'pip-services3-commons-nodex';
-import { CommandableGrpcClient } from 'pip-services3-grpc-nodex';
+import { CommandableHttpClient } from 'pip-services3-rpc-nodex';
 
 import { MessageTemplateV1 } from './MessageTemplateV1';
 import { IMessageTemplatesClientV1 } from './IMessageTemplatesClientV1';
 
-export class MessageTemplatesCommandableGrpcClientV1 extends CommandableGrpcClient implements IMessageTemplatesClientV1 {       
+export class MessageTemplatesCommandableHttpClientV1 extends CommandableHttpClient implements IMessageTemplatesClientV1 {       
     
     constructor(config?: any) {
         super('v1/message_templates');
@@ -34,7 +35,7 @@ export class MessageTemplatesCommandableGrpcClientV1 extends CommandableGrpcClie
             {
                 template_id: id
             }
-        );   
+        );     
     }
 
     public async getTemplateByIdOrName(correlationId: string, idOrName: string): Promise<MessageTemplateV1> {
@@ -44,7 +45,7 @@ export class MessageTemplatesCommandableGrpcClientV1 extends CommandableGrpcClie
             {
                 id_or_name: idOrName
             }
-        ); 
+        );
     }
 
     public async createTemplate(correlationId: string, template: MessageTemplateV1): Promise<MessageTemplateV1> {
@@ -64,7 +65,7 @@ export class MessageTemplatesCommandableGrpcClientV1 extends CommandableGrpcClie
             {
                 template: template
             }
-        );
+        ); 
     }
 
     public async deleteTemplateById(correlationId: string, id: string): Promise<MessageTemplateV1> {

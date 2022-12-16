@@ -31,12 +31,11 @@ export class MessageTemplatesGrpcClientV1 extends GrpcClient implements IMessage
             if (response.error != null)
                 throw MessageTemplatesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? MessageTemplatesGrpcConverterV1.toMessageTemplatePage(response.getPage()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
         }
     }
 
@@ -53,13 +52,12 @@ export class MessageTemplatesGrpcClientV1 extends GrpcClient implements IMessage
             if (response.error != null)
                 throw MessageTemplatesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }      
+        }     
     }
 
     public async getTemplateByIdOrName(correlationId: string, idOrName: string): Promise<MessageTemplateV1> {
@@ -75,13 +73,12 @@ export class MessageTemplatesGrpcClientV1 extends GrpcClient implements IMessage
             if (response.error != null)
                 throw MessageTemplatesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }    
+        }  
     }
 
     public async createTemplate(correlationId: string, template: MessageTemplateV1): Promise<MessageTemplateV1> {
@@ -99,13 +96,12 @@ export class MessageTemplatesGrpcClientV1 extends GrpcClient implements IMessage
             if (response.error != null)
                 throw MessageTemplatesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }    
+        }   
     }
 
     public async updateTemplate(correlationId: string, template: MessageTemplateV1): Promise<MessageTemplateV1> {
@@ -123,13 +119,12 @@ export class MessageTemplatesGrpcClientV1 extends GrpcClient implements IMessage
             if (response.error != null)
                 throw MessageTemplatesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        }    
+        }  
     }
 
     public async deleteTemplateById(correlationId: string, templateId: string): Promise<MessageTemplateV1> {
@@ -145,13 +140,12 @@ export class MessageTemplatesGrpcClientV1 extends GrpcClient implements IMessage
             if (response.error != null)
                 throw MessageTemplatesGrpcConverterV1.toError(response.error);
 
+            timing.endTiming();
             return response ? MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
         } catch (err) {
             timing.endFailure(err);
             throw err;
-        } finally {
-            timing.endTiming();
-        } 
+        }
     }
   
 }

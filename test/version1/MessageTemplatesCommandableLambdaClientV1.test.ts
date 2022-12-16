@@ -1,9 +1,9 @@
 import { ConfigParams } from 'pip-services3-commons-nodex';
 
 import { MessageTemplatesClientFixtureV1 } from './MessageTemplatesClientFixtureV1';
-import { MessageTemplatesLambdaClientV1 } from '../../src/version1/MessageTemplatesLambdaClientV1';
+import { MessageTemplatesCommandableLambdaClientV1 } from '../../src/version1/MessageTemplatesCommandableLambdaClientV1';
 
-suite('MessageTemplatesLambdaClient', ()=> {
+suite('MessageTemplatesCommandableLambdaClient', ()=> {
     let AWS_LAMDBA_ARN = process.env["AWS_LAMDBA_ARN"] || "";
     let AWS_ACCESS_ID = process.env["AWS_ACCESS_ID"] || "";
     let AWS_ACCESS_KEY = process.env["AWS_ACCESS_KEY"] || "";
@@ -24,11 +24,11 @@ suite('MessageTemplatesLambdaClient', ()=> {
     if (lambdaConfig.getAsNullableString("connection.protocol") != "aws")
         return;
 
-    let client: MessageTemplatesLambdaClientV1;
+    let client: MessageTemplatesCommandableLambdaClientV1;
     let fixture: MessageTemplatesClientFixtureV1;
 
     setup(async () => {
-        client = new MessageTemplatesLambdaClientV1();
+        client = new MessageTemplatesCommandableLambdaClientV1();
         client.configure(lambdaConfig);
 
         fixture = new MessageTemplatesClientFixtureV1(client);

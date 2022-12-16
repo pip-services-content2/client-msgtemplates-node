@@ -6,7 +6,7 @@ import { ConsoleLogger } from 'pip-services3-components-nodex';
 import { MessageTemplatesMemoryPersistence } from 'service-msgtemplates-node';
 import { MessageTemplatesController } from 'service-msgtemplates-node';
 import { MessageTemplatesHttpServiceV1 } from 'service-msgtemplates-node';
-import { MessageTemplatesHttpClientV1 } from '../../src/version1/MessageTemplatesHttpClientV1';
+import { MessageTemplatesCommandableHttpClientV1 } from '../../src/version1/MessageTemplatesCommandableHttpClientV1';
 import { MessageTemplatesClientFixtureV1 } from './MessageTemplatesClientFixtureV1';
 
 var httpConfig = ConfigParams.fromTuples(
@@ -15,9 +15,9 @@ var httpConfig = ConfigParams.fromTuples(
     "connection.port", 3000
 );
 
-suite('MessageTemplatesRestClientV1', ()=> {
+suite('MessageTemplatesCommandableClientV1', ()=> {
     let service: MessageTemplatesHttpServiceV1;
-    let client: MessageTemplatesHttpClientV1;
+    let client: MessageTemplatesCommandableHttpClientV1;
     let fixture: MessageTemplatesClientFixtureV1;
 
     suiteSetup(async () => {
@@ -32,12 +32,12 @@ suite('MessageTemplatesRestClientV1', ()=> {
             new Descriptor('pip-services', 'logger', 'console', 'default', '1.0'), logger,
             new Descriptor('service-msgtemplates', 'persistence', 'memory', 'default', '1.0'), persistence,
             new Descriptor('service-msgtemplates', 'controller', 'default', 'default', '1.0'), controller,
-            new Descriptor('service-msgtemplates', 'service', 'http', 'default', '1.0'), service
+            new Descriptor('service-msgtemplates', 'service', 'commandable-http', 'default', '1.0'), service
         );
         controller.setReferences(references);
         service.setReferences(references);
 
-        client = new MessageTemplatesHttpClientV1();
+        client = new MessageTemplatesCommandableHttpClientV1();
         client.setReferences(references);
         client.configure(httpConfig);
 

@@ -28,14 +28,12 @@ class MessageTemplatesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient
                 let response = yield this.call('get_templates', correlationId, request);
                 if (response.error != null)
                     throw MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toMessageTemplatePage(response.getPage()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -48,14 +46,12 @@ class MessageTemplatesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient
                 let response = yield this.call('get_template_by_id', correlationId, request);
                 if (response.error != null)
                     throw MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -68,14 +64,12 @@ class MessageTemplatesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient
                 let response = yield this.call('get_template_by_id_or_name', correlationId, request);
                 if (response.error != null)
                     throw MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -89,14 +83,12 @@ class MessageTemplatesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient
                 let response = yield this.call('create_template', correlationId, request);
                 if (response.error != null)
                     throw MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -110,14 +102,12 @@ class MessageTemplatesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient
                 let response = yield this.call('update_template', correlationId, request);
                 if (response.error != null)
                     throw MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
@@ -130,14 +120,12 @@ class MessageTemplatesGrpcClientV1 extends pip_services3_grpc_nodex_1.GrpcClient
                 let response = yield this.call('delete_template_by_id', correlationId, request);
                 if (response.error != null)
                     throw MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toError(response.error);
+                timing.endTiming();
                 return response ? MessageTemplatesGrpcConverterV1_1.MessageTemplatesGrpcConverterV1.toMessageTemplate(response.getTemplate()) : null;
             }
             catch (err) {
                 timing.endFailure(err);
                 throw err;
-            }
-            finally {
-                timing.endTiming();
             }
         });
     }
