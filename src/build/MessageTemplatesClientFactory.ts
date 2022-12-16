@@ -12,8 +12,8 @@ export class MessageTemplatesClientFactory extends Factory {
 	public static Descriptor: Descriptor = new Descriptor('service-msgtemplates', 'factory', 'default', 'default', '1.0');
 	public static NullClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'null', 'default', '1.0');
 	public static DirectClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'direct', 'default', '1.0');
-	public static HttpClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'http', 'default', '1.0');
-	public static LambdaClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'lambda', 'default', '1.0');
+	public static CmdHttpClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'commandable-http', 'default', '1.0');
+	public static CmdLambdaClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'commandable-lambda', 'default', '1.0');
 	public static CommandableGrpcClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'commandable-grpc', 'default', '1.0');
 	public static GrpcClientV1Descriptor = new Descriptor('service-msgtemplates', 'client', 'grpc', 'default', '1.0');
 	
@@ -22,8 +22,8 @@ export class MessageTemplatesClientFactory extends Factory {
 
 		this.registerAsType(MessageTemplatesClientFactory.NullClientV1Descriptor, MessageTemplatesNullClientV1);
 		this.registerAsType(MessageTemplatesClientFactory.DirectClientV1Descriptor, MessageTemplatesDirectClientV1);
-		this.registerAsType(MessageTemplatesClientFactory.HttpClientV1Descriptor, MessageTemplatesCommandableHttpClientV1);
-		this.registerAsType(MessageTemplatesClientFactory.LambdaClientV1Descriptor, MessageTemplatesCommandableLambdaClientV1);
+		this.registerAsType(MessageTemplatesClientFactory.CmdHttpClientV1Descriptor, MessageTemplatesCommandableHttpClientV1);
+		this.registerAsType(MessageTemplatesClientFactory.CmdLambdaClientV1Descriptor, MessageTemplatesCommandableLambdaClientV1);
 		this.registerAsType(MessageTemplatesClientFactory.CommandableGrpcClientV1Descriptor, MessageTemplatesCommandableGrpcClientV1);
 		this.registerAsType(MessageTemplatesClientFactory.GrpcClientV1Descriptor, MessageTemplatesGrpcClientV1);
 	}

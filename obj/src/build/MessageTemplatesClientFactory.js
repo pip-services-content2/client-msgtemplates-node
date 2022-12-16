@@ -14,8 +14,8 @@ class MessageTemplatesClientFactory extends pip_services3_components_nodex_1.Fac
         super();
         this.registerAsType(MessageTemplatesClientFactory.NullClientV1Descriptor, MessageTemplatesNullClientV1_1.MessageTemplatesNullClientV1);
         this.registerAsType(MessageTemplatesClientFactory.DirectClientV1Descriptor, MessageTemplatesDirectClientV1_1.MessageTemplatesDirectClientV1);
-        this.registerAsType(MessageTemplatesClientFactory.HttpClientV1Descriptor, MessageTemplatesCommandableHttpClientV1_1.MessageTemplatesCommandableHttpClientV1);
-        this.registerAsType(MessageTemplatesClientFactory.LambdaClientV1Descriptor, MessageTemplatesCommandableLambdaClientV1_1.MessageTemplatesCommandableLambdaClientV1);
+        this.registerAsType(MessageTemplatesClientFactory.CmdHttpClientV1Descriptor, MessageTemplatesCommandableHttpClientV1_1.MessageTemplatesCommandableHttpClientV1);
+        this.registerAsType(MessageTemplatesClientFactory.CmdLambdaClientV1Descriptor, MessageTemplatesCommandableLambdaClientV1_1.MessageTemplatesCommandableLambdaClientV1);
         this.registerAsType(MessageTemplatesClientFactory.CommandableGrpcClientV1Descriptor, MessageTemplatesCommandableGrpcClientV1_1.MessageTemplatesCommandableGrpcClientV1);
         this.registerAsType(MessageTemplatesClientFactory.GrpcClientV1Descriptor, MessageTemplatesGrpcClientV1_1.MessageTemplatesGrpcClientV1);
     }
@@ -24,8 +24,8 @@ exports.MessageTemplatesClientFactory = MessageTemplatesClientFactory;
 MessageTemplatesClientFactory.Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'factory', 'default', 'default', '1.0');
 MessageTemplatesClientFactory.NullClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'null', 'default', '1.0');
 MessageTemplatesClientFactory.DirectClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'direct', 'default', '1.0');
-MessageTemplatesClientFactory.HttpClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'http', 'default', '1.0');
-MessageTemplatesClientFactory.LambdaClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'lambda', 'default', '1.0');
+MessageTemplatesClientFactory.CmdHttpClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'commandable-http', 'default', '1.0');
+MessageTemplatesClientFactory.CmdLambdaClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'commandable-lambda', 'default', '1.0');
 MessageTemplatesClientFactory.CommandableGrpcClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'commandable-grpc', 'default', '1.0');
 MessageTemplatesClientFactory.GrpcClientV1Descriptor = new pip_services3_commons_nodex_1.Descriptor('service-msgtemplates', 'client', 'grpc', 'default', '1.0');
 //# sourceMappingURL=MessageTemplatesClientFactory.js.map
